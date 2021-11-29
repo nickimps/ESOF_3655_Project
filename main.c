@@ -80,11 +80,4 @@ int main() {
 			printf("Show Text allows you to show the content of a text file");
 		}
 	}
-	
-		
-	
-	
-	
-	
-	
 }
