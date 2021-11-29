@@ -27,14 +27,14 @@ void renameFile() {
 		if (access(after, F_OK)) {
 			
 			if (rename(before, after) == 0) {
-				printf("Name succesfully changed");
+				printf("Name succesfully changed.");
 			}
 			else {
-				printf("Name could not be changed");
+				printf("Name could not be changed.");
 			}
 		}
 		else {
-			printf("Error: File name %s already exists, after");
+			printf("Error: File name %s already exists", after);
 		}
 	} 
 	else {
