@@ -21,14 +21,18 @@ void create() {
 	printf("Enter the new file's name: ");
 	scanf("%s", fileName);
 	
+	FILE *fptr = fopen(fileName, "wb");
+	
 	//if the file exists, then we try to create it
 	// else, let user know it exists already
-	if(access(fileName, F_OK))
-		if (fopen(fileName, "wb"))
+	if(access(fileName, F_OK) == 0)
+		if (fptr)
 			printf("File has been created.\n");
 		else
 			printf("Error: Unable to create the file.\n");
 	else
 		printf("Error: The file you want to create already exists.\n");
+	
+	fclose(fptr);
 }
 	
