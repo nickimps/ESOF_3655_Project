@@ -20,7 +20,7 @@ void renameFile() {
 	printf("What is the existing file name: ");
 	scanf("%s", before);
 	
-	if (access(before, F_OK)) {
+	if (access(before, F_OK) == 0) {
 		printf("Enter a new name: ");
 		scanf("%s", after);
 		
