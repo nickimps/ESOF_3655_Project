@@ -18,7 +18,7 @@ void copy() {
 	char fileName[800];
 	
 	//Get file name from the user
-	printf("Enter the file's name: ");
+	printf("Enter the file name you want to copy: ");
 	scanf("%s", fileName);
 	
 	//if the file exists, then we try to create it
