@@ -28,8 +28,8 @@ void create() {
 		if (fopen(fileName, "w"))
 			printf("File has been created.\n");
 		else
-			printf("Error: unable to create the file.\n");
+			printf("Error: Unable to create the file.\n");
 	else
-		printf("Error: the file you want to create already exists.\n");
+		printf("Error: The file you want to create already exists.\n");
 }
 	

@@ -27,5 +27,5 @@ void delete() {
 	if(remove(fileName))
 		printf("File has been deleted.\n")
 	else
-		printf("Error: the file you want to create already exists.\n");
+		printf("Error: Unable to delete the file.\n");
 }
