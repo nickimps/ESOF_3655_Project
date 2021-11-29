@@ -23,7 +23,7 @@ void copy() {
 	
 	//if the file exists, then we try to create it
 	// else, let user know it exists already
-	if(remove(fileName))
+	if(remove(fileName) == 0)
 		printf("File has been copied.\n")
 	else
 		printf("Error: Unable to copy the file.\n");
