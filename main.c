@@ -21,7 +21,7 @@ Main driver program
 
 int main() {
 
-	char command[1024];
+	char command[800];
 	
 	printf("Commands: \nCreateFile\nDeleteFile\nRenameFile\nCopyFile\nMoveFile\nAddText\nAppendText\nRemoveText\nShowText\nExit\n");
 
