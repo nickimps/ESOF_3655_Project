@@ -15,7 +15,6 @@ This file creates a file in the same directory as where the program is being run
 
 void create() {
 	//Initialize file variable and char arrays
-	FILE *file;
 	char fileName[800];
 	
 	//Get file name from the user
