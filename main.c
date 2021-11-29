@@ -32,7 +32,7 @@ int main() {
 		}
 		
 		else if (strcmp("RenameFile", command) == 0) {
-			rename();
+			renameFile();
 		}
 		else if (strcmp("RenameFile/h", command) == 0) {
 			printf("Rename File allows you to rename a file");

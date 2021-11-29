@@ -11,7 +11,7 @@ Jarrod Graseley
 #include <stdio.h>
 #include <unistd.h>
 
-void rename() {
+void renameFile() {
 	FILE *file;
 	int name;
 	char before[1024];
@@ -27,17 +27,17 @@ void rename() {
 		if (access(after, F_OK)) {
 			
 			if (rename(before, after) == 0) {
-				prinf("Name succesfully changed");
+				printf("Name succesfully changed");
 			}
 			else {
-				printf("Name could not be changed)
+				printf("Name could not be changed");
 			}
 		}
 		else {
-			printf("Error: File name %s already exists, after);
+			printf("Error: File name %s already exists, after");
 		}
 	} 
 	else {
 		printf("Error: No such file with name %s exists", before);
 	}
-
+}
