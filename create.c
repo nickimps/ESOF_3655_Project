@@ -22,7 +22,7 @@ void create() {
 	
 	//if the file exists, then we try to create it
 	// else, let user know it exists already
-	if(access(fname, F_OK) == 0)
+	if(access(fileName, F_OK))
 		if (fopen(fileName, "w"))
 			printf("File has been created.");
 		else
