@@ -17,6 +17,7 @@ Main driver program
 #include "rename.c"
 #include "delete.c"
 #include "copy.c"
+#include "move.c"
 
 int main() {
 
@@ -58,7 +59,7 @@ int main() {
 		}
 		
 		else if (strcmp("MoveFile", command) == 0) {
-			//move();
+			move();
 		}
 		else if (strcmp("MoveFile/h", command) == 0) {
 			printf("Move File allows you to move an existing file");
