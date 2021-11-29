@@ -4,7 +4,7 @@ ESOF 3655 Project
 
 Nicholas Imperius
 Jimmy Tsang
-Jarrod Graseley
+Jarrod Grasley
 
 This file copies a file in the same directory as where the program is being run
 
