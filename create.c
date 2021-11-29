@@ -6,6 +6,8 @@ Nicholas Imperius
 Jimmy Tsang
 Jarrod Graseley
 
+This file creates a file in the same directory as where the program is being run
+
 */
 
 #include <stdio.h>
@@ -24,10 +26,10 @@ void create() {
 	// else, let user know it exists already
 	if(access(fileName, F_OK))
 		if (fopen(fileName, "w"))
-			printf("File has been created.");
+			printf("File has been created.\n");
 		else
-			printf("Error: unable to create the file.");
+			printf("Error: unable to create the file.\n");
 	else
-		printf("Error: the file you want to create already exists.");
+		printf("Error: the file you want to create already exists.\n");
 }
 	
