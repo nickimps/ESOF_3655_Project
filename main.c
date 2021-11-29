@@ -1,4 +1,15 @@
-//Add inserts
+/*
+
+ESOF 3655 Project
+
+Nicholas Imperius
+Jimmy Tsang
+Jarrod Grasley
+
+Main driver program
+
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
