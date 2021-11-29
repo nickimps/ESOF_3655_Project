@@ -20,11 +20,39 @@ void copy() {
 	//Get file name from the user
 	printf("Enter the file name you want to copy: ");
 	scanf("%s", fileName);
+
+	//Create the file pointer for the source file we want to copy
+	FILE *fptrSource = fopen(fileName, "r");
 	
-	//if the file exists, then we try to create it
-	// else, let user know it exists already
-	if(remove(fileName) == 0)
-		printf("File has been copied.\n")
+	//If the file was able to opened, then get the destination file
+	// else, let the user know
+	if (fptrSource) {
+		//Get file name from the user
+		printf("Enter the file name you want to copy it to: ");
+		scanf("%s", fileName);
+		
+		FILE *fptrDest = fopen(fileName, "wb");
+		
+		//If the file was able to be opened, copy the file char by char
+		// else, let the user know
+		if (fptrDest) {
+			char chr = fgetc(fptrSource);
+			while (chr != EOF) {
+				fputc(chr, fptrDest);
+				chr = fgetc(fptrSource);
+			}
+			
+			printf("Copy Successful.");
+		}
+		else
+			printf("Error: Cannot open file '%s'\n", fileName);
+		
+		//Close pointer
+		fclose(fptrDest);
+	}
 	else
-		printf("Error: Unable to copy the file.\n");
+		printf("Error: Cannot open file '%s'\n", fileName);
+	
+	//Close pointer
+	fclose(fptrSource);
 }

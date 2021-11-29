@@ -5,6 +5,7 @@
 #include "create.c"
 #include "rename.c"
 #include "delete.c"
+#include "copy.c"
 
 int main() {
 
@@ -39,7 +40,7 @@ int main() {
 		}
 		
 		else if (strcmp("CopyFile", command) == 0) {
-			//copy();
+			copy();
 		}
 		else if (strcmp("CopyFile/h", command) == 0) {
 			printf("Copy File allows you to take an existing file and duplicate it");
