@@ -3,6 +3,7 @@
 #include <stdlib.h>
 
 #include "create.c"
+#include "delete.c"
 
 int main() {
 
@@ -23,7 +24,7 @@ int main() {
 		}
 		
 		else if (strcmp("DeleteFile", command) == 0) {
-			//delete();
+			delete();
 		}
 		else if (strcmp("DeleteFile/h", command) == 0) {
 			printf("Delete File allows you to delete an existing file");
