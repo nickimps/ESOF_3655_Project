@@ -46,6 +46,7 @@ void move() {
 				
 				//Close the file
 				fclose(destFile);
+				fclose(sourceFile);
 				
 				//Remove the original file
 				remove(source);
@@ -55,9 +56,6 @@ void move() {
 		}
 		else
 			printf("Error: Unable to read file.\n");
-		
-		//Close the file
-		fclose(sourceFile);
 	}
 	else
 		printf("Error: File does not exist.\n");

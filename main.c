@@ -80,7 +80,7 @@ int main() {
 		}
 		
 		else if (strcmp("RemoveText", command) == 0) {
-			//r/emove();
+			//remove();
 		}
 		else if (strcmp("RemoveText/h", command) == 0) {
 			printf("Remove Text allows you to remove all text in a text file");
