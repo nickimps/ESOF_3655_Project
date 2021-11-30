@@ -16,7 +16,7 @@ This file shows the text of a .txt file
 void show() {
 	//Get name of file to access
 	char source[800];
-	printf("Enter the file you would like to show: \n");
+	printf("Enter the file you would like to show: ");
 	scanf("%s", source);
 	
 	//check if the file exists

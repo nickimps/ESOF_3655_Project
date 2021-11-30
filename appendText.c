@@ -16,7 +16,7 @@ This file appends text to a .txt file
 void append() {
 	//Get name of file to access
 	char source[800];
-	printf("Enter the file you would like to show: \n");
+	printf("Enter the file you would like to change: ");
 	scanf("%s", source);
 	
 	//check if file exists
@@ -26,7 +26,7 @@ void append() {
 		
 		//get data to append
 		char newData[800];
-		printf("Enter the text you would like to append: \n");
+		printf("Enter the text you would like to append: ");
 		scanf("%s", newData);
 		
 		//send that data to the file
