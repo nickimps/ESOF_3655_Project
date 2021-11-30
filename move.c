@@ -45,8 +45,8 @@ void move() {
 					printf("Error: Unable to create file.\n");
 				
 				//Close the file
-				fclose(destFile);
 				fclose(sourceFile);
+				fclose(destFile);
 				
 				//Remove the original file
 				remove(source);
@@ -56,7 +56,12 @@ void move() {
 		}
 		else
 			printf("Error: Unable to read file.\n");
+		
+		//Close the file
+		fclose(sourceFile);
 	}
 	else
 		printf("Error: File does not exist.\n");
+	
+	
 }
