@@ -14,8 +14,8 @@ This file removes text from a .txt file
 #include <unistd.h>
 #include <string.h>
 
-void remove() {
-		//Initialize file variable and char arrays
+void removeText() {
+	//Initialize file variable and char arrays
 	char textName[800];
 	
 	//Get file name from the user
@@ -26,9 +26,8 @@ void remove() {
 	
 	if (access(textName, F_OK) == 0) {
 		fopen(textName, "w");
-		printf("Text file has been cleared");
+		printf("Text file has been cleared.\n");
 	} 
-	else {
-		printf("Text file could not be found");
-	}
+	else
+		printf("Error: Text file could not be found.\n");
 }

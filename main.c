@@ -27,7 +27,7 @@ int main() {
 
 	char command[800];
 	
-	printf("Commands: \nCreateFile\nDeleteFile\nRenameFile\nCopyFile\nMoveFile\nAddText\nAppendText\nRemoveText\nShowText\nExit\n");
+	printf("Commands: \nCreateFile\nDeleteFile\nRenameFile\nCopyFile\nMoveFile\nInsertText\nAppendText\nRemoveText\nShowText\nExit\n");
 
 	//Program runs as long as exit is not called
 	while(strcmp("Exit", command) != 0) {
@@ -84,7 +84,7 @@ int main() {
 		}
 		
 		else if (strcmp("RemoveText", command) == 0) {
-			remove();
+			removeText();
 		}
 		else if (strcmp("RemoveText/h", command) == 0) {
 			printf("RemoveText allows you to remove all text in a text file");

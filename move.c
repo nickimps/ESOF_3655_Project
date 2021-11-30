@@ -10,6 +10,9 @@ This file moves a file to another directory
 
 */
 
+#include <stdio.h>
+#include <unistd.h>
+
 void move() {
 	//Get name of the file they want to move
 	char source[800];

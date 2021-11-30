@@ -10,6 +10,9 @@ This file shows the text of a .txt file
 
 */
 
+#include <stdio.h>
+#include <unistd.h>
+
 void show() {
 	
 }
