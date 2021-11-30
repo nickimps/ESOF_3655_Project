@@ -19,25 +19,33 @@ void show() {
 	printf("Enter the file you would like to show: ");
 	scanf("%s", source);
 	
-	//check if the file exists
-	if (access(source, F_OK) != -1) {
-		//open the file with read access
-		FILE* sourceFile = fopen(source, "r");
-		
-		if (sourceFile) {
-			//create temp variable
-			char temp;
+	int fileNameLength = strlen(source);
+	const char *fileType = &source[fileNameLength-4];
+	char txtType[] = ".txt";
+	
+	if (strcmp(txtType, fileType) == 0) {
+		//check if the file exists
+		if (access(source, F_OK) != -1) {
+			//open the file with read access
+			FILE* sourceFile = fopen(source, "r");
 			
-			//read file until end of file (EOF)
-			while ((temp = fgetc(sourceFile)) != EOF) {
-				//send individual char to line until it reaches the end
-				putchar(temp);
+			if (sourceFile) {
+				//create temp variable
+				char temp;
+				
+				//read file until end of file (EOF)
+				while ((temp = fgetc(sourceFile)) != EOF) {
+					//send individual char to line until it reaches the end
+					putchar(temp);
+				}
+				printf("\n");
 			}
-			printf("\n");
+			//close the file
+			fclose(sourceFile);
 		}
-		//close the file
-		fclose(sourceFile);
+		else
+			printf("Error: Text file could not be found.\n");
 	}
 	else
-		printf("Error: Text file could not be found.\n");
+		printf("Error: Not a text file.\n");
 }

@@ -16,18 +16,24 @@ This file removes text from a .txt file
 
 void removeText() {
 	//Initialize file variable and char arrays
-	char textName[800];
+	char fileName[800];
 	
 	//Get file name from the user
 	printf("Enter the textFile's name: ");
-	scanf("%s", textName);
+	scanf("%s", fileName);
 	
-	//Add comparison for .txt
+	int fileNameLength = strlen(fileName);
+	const char *fileType = &fileName[fileNameLength-4];
+	char txtType[] = ".txt";
 	
-	if (access(textName, F_OK) == 0) {
-		fopen(textName, "w");
-		printf("Text file has been cleared.\n");
-	} 
+	if (strcmp(txtType, fileType) == 0) {
+		if (access(fileName, F_OK) == 0) {
+			fopen(fileName, "w");
+			printf("Text file has been cleared.\n");
+		} 
+		else
+			printf("Error: Text file could not be found.\n");
+	}
 	else
-		printf("Error: Text file could not be found.\n");
+		printf("Error: Not a text file.\n");
 }
