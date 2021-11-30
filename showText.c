@@ -33,6 +33,7 @@ void show() {
 				//send individual char to line until it reaches the end
 				putchar(temp);
 			}
+			printf("\n");
 		}
 		//close the file
 		fclose(sourceFile);

@@ -19,22 +19,37 @@ void append() {
 	printf("Enter the file you would like to change: ");
 	scanf("%s", source);
 	
-	//check if file exists
+	//Check if file exists
 	if (access(source, F_OK) != -1) {
-		//open the file in append mode
+		//Open the file in append mode
 		FILE* sourceFile = fopen(source, "a");
 		
-		//get data to append
+		//Get data to append and loop through each char to add text with spaces
 		char newData[800];
+		char ch;
+		int index = 0;
 		printf("Enter the text you would like to append: ");
-		scanf("%s", newData);
 		
-		//send that data to the file
+		//This removes the newline we just created from clicking enter on the previous prompt
+		scanf("%c", &ch);
+		
+		//Loop through remaining characters until we get a newline character
+		while (scanf("%c", &ch)) {
+			if (ch == '\n')
+				break;
+			newData[index++] = ch;
+		}
+		
+		//Lets us know we are at end of the string
+		newData[index] = '\0';
+		
+		//Send that data to the file
 		if (fputs(newData, sourceFile) != EOF)
-			printf("Text appended successfully.");
+			printf("Text appended successfully.\n");
 		else
-			printf("Error: Append unsuccessful.");
-			
+			printf("Error: Append unsuccessful.\n");
+		
+		//Close the file
 		fclose(sourceFile);
 	}
 	else
