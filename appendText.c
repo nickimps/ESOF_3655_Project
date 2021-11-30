@@ -10,6 +10,9 @@ This file appends text to a .txt file
 
 */
 
+#include <stdio.h>
+#include <unistd.h>
+
 void append() {
 	
 }
