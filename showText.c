@@ -37,4 +37,6 @@ void show() {
 		//close the file
 		fclose(sourceFile);
 	}
+	else
+		printf("Error: Text file could not be found.\n");
 }

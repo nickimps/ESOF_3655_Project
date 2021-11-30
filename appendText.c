@@ -30,8 +30,13 @@ void append() {
 		scanf("%s", newData);
 		
 		//send that data to the file
-		fputs(newData, sourceFile);
-		
+		if (fputs(newData, sourceFile) != EOF)
+			printf("Text appended successfully.");
+		else
+			printf("Error: Append unsuccessful.");
+			
 		fclose(sourceFile);
 	}
+	else
+		printf("Error: Text file could not be found.\n");
 }
