@@ -18,6 +18,10 @@ Main driver program
 #include "delete.c"
 #include "copy.c"
 #include "move.c"
+#include "insertText.c"
+#include "appendText.c"
+#include "removeText.c"
+#include "showText.c"
 
 int main() {
 
@@ -34,28 +38,28 @@ int main() {
 			create();
 		}
 		else if (strcmp("CreateFile/h", command) == 0) {
-			printf("Create File allows you to create a new file");
+			printf("CreateFile allows you to create a new file");
 		}
 		
 		else if (strcmp("DeleteFile", command) == 0) {
 			delete();
 		}
 		else if (strcmp("DeleteFile/h", command) == 0) {
-			printf("Delete File allows you to delete an existing file");
+			printf("DeleteFile allows you to delete an existing file");
 		}
 		
 		else if (strcmp("RenameFile", command) == 0) {
 			renameFile();
 		}
 		else if (strcmp("RenameFile/h", command) == 0) {
-			printf("Rename File allows you to rename a file");
+			printf("RenameFile allows you to rename a file");
 		}
 		
 		else if (strcmp("CopyFile", command) == 0) {
 			copy();
 		}
 		else if (strcmp("CopyFile/h", command) == 0) {
-			printf("Copy File allows you to take an existing file and duplicate it");
+			printf("CopyFile allows you to take an existing file and duplicate it");
 		}
 		
 		else if (strcmp("MoveFile", command) == 0) {
@@ -65,32 +69,32 @@ int main() {
 			printf("Move File allows you to move an existing file");
 		}
 		
-		else if (strcmp("AddText", command) == 0) {
-			//add();
+		else if (strcmp("InsertText", command) == 0) {
+			insert();
 		}
-		else if (strcmp("AddText/h", command) == 0) {
-			printf("Add Text allows you to add text to the end of a text file");
+		else if (strcmp("InsertText/h", command) == 0) {
+			printf("InsertText allows you to add text to the end of a text file");
 		}
 		
 		else if (strcmp("AppendText", command) == 0) {
-			//append();
+			append();
 		}
 		else if (strcmp("AppendText/h", command) == 0) {
-			printf("Append Text allows you to append text to anywhere in a text file");
+			printf("AppendText allows you to append text to anywhere in a text file");
 		}
 		
 		else if (strcmp("RemoveText", command) == 0) {
-			//remove();
+			remove();
 		}
 		else if (strcmp("RemoveText/h", command) == 0) {
-			printf("Remove Text allows you to remove all text in a text file");
+			printf("RemoveText allows you to remove all text in a text file");
 		}
 		
 		else if (strcmp("ShowText", command) == 0) {
-			//show();
+			show();
 		}
 		else if (strcmp("ShowText/h", command) == 0) {
-			printf("Show Text allows you to show the content of a text file");
+			printf("ShowText allows you to show the content of a text file");
 		}
 	}
 }
