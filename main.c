@@ -38,63 +38,63 @@ int main() {
 			create();
 		}
 		else if (strcmp("CreateFile/h", command) == 0) {
-			printf("CreateFile allows you to create a new file");
+			printf("CreateFile allows you to create a new file. Once you use the command, just enter the new file's name.");
 		}
 		
 		else if (strcmp("DeleteFile", command) == 0) {
 			delete();
 		}
 		else if (strcmp("DeleteFile/h", command) == 0) {
-			printf("DeleteFile allows you to delete an existing file");
+			printf("DeleteFile allows you to delete an existing file. Once you use the command, enter the file's name you want to delete.");
 		}
 		
 		else if (strcmp("RenameFile", command) == 0) {
 			renameFile();
 		}
 		else if (strcmp("RenameFile/h", command) == 0) {
-			printf("RenameFile allows you to rename a file");
+			printf("RenameFile allows you to rename a file. Once you use the command, enter the name of the file and then the new name for it.");
 		}
 		
 		else if (strcmp("CopyFile", command) == 0) {
 			copy();
 		}
 		else if (strcmp("CopyFile/h", command) == 0) {
-			printf("CopyFile allows you to take an existing file and duplicate it");
+			printf("CopyFile allows you to take an existing file and duplicate it. Once you use the command, enter the file you want to copy and then the path with the new file name.");
 		}
 		
 		else if (strcmp("MoveFile", command) == 0) {
 			move();
 		}
 		else if (strcmp("MoveFile/h", command) == 0) {
-			printf("Move File allows you to move an existing file");
+			printf("MoveFile allows you to move an existing file to a different folder. Once you use the command, enter the file and the path of where you want to move it to.");
 		}
 		
 		else if (strcmp("InsertText", command) == 0) {
 			insert();
 		}
 		else if (strcmp("InsertText/h", command) == 0) {
-			printf("InsertText allows you to add text to the end of a text file");
+			printf("InsertText allows you to add text to the end of a text file. Once you use the command, enter the file's name, the text you want to insert, and where you want to insert it.");
 		}
 		
 		else if (strcmp("AppendText", command) == 0) {
 			append();
 		}
 		else if (strcmp("AppendText/h", command) == 0) {
-			printf("AppendText allows you to append text to anywhere in a text file");
+			printf("AppendText allows you to append text to anywhere in a text file. Once you use the command, enter the file's name and the text you would like to add to the end of the file.");
 		}
 		
 		else if (strcmp("RemoveText", command) == 0) {
 			removeText();
 		}
 		else if (strcmp("RemoveText/h", command) == 0) {
-			printf("RemoveText allows you to remove all text in a text file");
+			printf("RemoveText allows you to remove all text in a text file. Once you use the command, enter the file's name that you want to clear.");
 		}
 		
 		else if (strcmp("ShowText", command) == 0) {
 			show();
 		}
 		else if (strcmp("ShowText/h", command) == 0) {
-			printf("ShowText allows you to show the content of a text file");
+			printf("ShowText allows you to show the content of a text file. Once you use the command, enter the file's name that has the text you want to show.");
 		}
 	}
 }

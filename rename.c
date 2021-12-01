@@ -31,7 +31,7 @@ void renameFile() {
 			if (rename(before, after) == 0)
 				printf("Name succesfully changed.\n");
 			else
-				printf("Name could not be changed.\n");
+				printf("Error: Name could not be changed.\n");
 		else
 			printf("Error: File '%s' already exists.\n", after);
 	} 
