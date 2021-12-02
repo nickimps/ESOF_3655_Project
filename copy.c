@@ -42,7 +42,7 @@ void copy() {
 				chr = fgetc(fptrSource);
 			}
 			
-			printf("Copy Successful.");
+			printf("Copy Successful.\n");
 		}
 		else
 			printf("Error: Cannot open file '%s'\n", fileName);
