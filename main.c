@@ -66,7 +66,7 @@ int main() {
 			move();
 		}
 		else if (strcmp("MoveFile/h", command) == 0) {
-			printf("MoveFile allows you to move an existing file to a different folder. Once you use the command, enter the file and the path of where you want to move it to.");
+			printf("MoveFile allows you to move an existing file to a different folder. \nOnce you use the command,enter 'full path'\'new file name'.");
 		}
 		
 		else if (strcmp("InsertText", command) == 0) {
