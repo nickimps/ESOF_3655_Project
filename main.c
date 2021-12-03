@@ -96,5 +96,12 @@ int main() {
 		else if (strcmp("ShowText/h", command) == 0) {
 			printf("ShowText allows you to show the content of a text file. Once you use the command, enter the file's name that has the text you want to show.");
 		}
+		
+		else if (strcmp("Exit", command) == 0) {
+			printf("");
+		}
+		else {
+			printf("Error: Not a valid command.\n");
+		}
 	}
 }
