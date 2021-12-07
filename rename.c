@@ -6,6 +6,8 @@ Nicholas Imperius
 Jimmy Tsang
 Jarrod Grasley
 
+This file renames a file.
+
 */
 
 #include <stdio.h>
