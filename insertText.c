@@ -47,8 +47,10 @@ void insert() {
 				
 				//Get the text to insert
 				char inputText[8000];
+				char temp;
 				printf("Enter the text you want to insert: ");
-				scanf("%s[$\n]", inputText);
+				scanf("%c", &temp); // clears buffer
+				scanf("%[^\n]s", inputText);
 				
 				//Get length of original text
 				int lengthOfFile = strlen(originalString);
