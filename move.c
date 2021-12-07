@@ -42,6 +42,9 @@ void move() {
 						chr = fgetc(sourceFile);
 					}
 					
+					//Remove the original file
+					remove(source);
+					
 					printf("File successfully moved.\n");
 				}
 				else
@@ -50,9 +53,6 @@ void move() {
 				//Close the file
 				fclose(sourceFile);
 				fclose(destFile);
-				
-				//Remove the original file
-				remove(source);
 			}
 			else
 				printf("Error: File exists already.\n");
